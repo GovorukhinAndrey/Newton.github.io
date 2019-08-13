@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Main Page</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+	<div class="wrapper">
+		<div class="sidebar">
+			<div class="sidebar__content">
+				<a href="/" class="logo">
+					<img class="img-responsive" src="/img/logo.png" alt="Ньютон">
+				</a>
+				<div class="menu-block">
+					<div class="hamburger-wrap">
+						<button class="hamburger hamburger--spring" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>						
+					</div>
+					<nav class="navigation" id="navigation">
+						<ul class="menu">
+							<li class="menu__item"><a href="#slider" class="scroll menu__link">Почему ЖК Ньютон?</a></li>
+							<li class="menu__item"><a href="#apartments" class="scroll menu__link">Выбрать квартиру</a></li>
+							<li class="menu__item"><a href="#payment" class="scroll menu__link">Варианты оплаты</a></li>
+						</ul>
+						<a href="tel: +73532333521" class="phone">+7 (353) 233-35-21</a>
+					</nav>
+				</div>
+				<div class="contacts">
+					<span class="title">Отдел продаж</span>
+					<a href="tel: +73532333521" class="phone">+7 (353) 233-35-21</a>
+				</div>
+			</div>
+		</div>	
+		<div class="content">
+			<header class="main-header">
+				<a href="#" class="main-header__item">
+					<div class="main-header__item-img" style="background-image: url(img/main-header1.png)" ></div>
+					<div class="main-header__item-content">
+						<h3 class="main-header__item-content-title">SMART-квартира:</h3>
+						<p class="main-header__item-content-description">больше места в каждом метре</p>
+					</div>
+				</a>
+				<a id="tab2" href="#payment"  class="scroll main-header__item ">
+					<div class="main-header__item-img" style="background-image: url(img/main-header2.png)" ></div>
+					<div class="main-header__item-content">
+						<h3 class="main-header__item-content-title">Честная ипотека</h3>
+						<p class="main-header__item-content-description">6% для всех</p>
+					</div>
+				</a>
+				<a href="#form-excursion" class="open-popup main-header__item">
+					<div class="main-header__item-img" style="background-image: url(img/main-header3.png)" ></div>
+					<div class="main-header__item-content">
+						<h3 class="main-header__item-content-title">Бесплатная экскурсия</h3>
+						<p class="main-header__item-content-description">в ЖК «Ньютон»</p>
+					</div>
+				</a>
+				<a href="?discount=yes" class="main-header__item scroll-to-discount">
+					<div class="main-header__item-img" style="background-image: url(img/main-header4.png)" ></div>
+					<div class="main-header__item-content">
+						<h3 class="main-header__item-content-title">Дарим 5000 рублей</h3>
+						<p class="main-header__item-content-description">при покупке квартиры</p>
+					</div>
+				</a>
+				<a id="tab1" href="#payment"  class="scroll main-header__item" >
+					<div class="main-header__item-img" style="background-image: url(img/main-header5.png)" ></div>
+					<div class="main-header__item-content">
+						<h3 class="main-header__item-content-title">Меняем</h3>
+						<p class="main-header__item-content-description">старую квартиру на новую</p>
+					</div>
+				</a>
+				<a href="#news" class="scroll main-header__bottom-line"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+			</header>
+			<div id="news" class="news flex-fluid">
+				<div class="news__item col4-sm-12">
+					<h3 class="news__title">1 сентября открытие новой школы в ЖК «Ньютон» </h3>
+					<span class="date">01.08.2018</span>
+					<p>МАОУ «Образовательный центр № 4 г. Челябинска» откроет двери для  первых учеников уже в сентябре 2018  года. Школа рассчитана на 1 100 мест. </p>
+				</div>
+				<div class="news__item col4-sm-12">
+					<h3 class="news__title">Сдача Дом №11 (стр.) запланирована на ноябрь 2018</h3>
+					<span class="date">27.07.2018</span>
+					<p>Не упустите возможность заказать чистовую и предчистовую отделку для квартир в доме №11. Стоимость – от 3 000 рублей за кв.м. </p>
+				</div>
+				<div class="news__item col4-sm-12">
+					<h3 class="news__title">Скидки до 300 000 рублей</h3>
+					<span class="date">03.08.2018</span>
+					<p>Скидки на двухкомнатные, трехкомнатные и четырехкомнатные квартиры на втором этаже в доме №2. Передача ключей с 30.08.2018.</p>
+				</div>
+			</div>
+			<!-- Слайдер -->
+			<div id="slider" class="slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide flex-fluid">
+							<div class="col6">
+								<img src="/img/slider1.png" alt="" class="img-responsive">
+							</div>
+							<div class="col6 slider-content">
+								<h2 class="slider-content__title">SMART-квартиры в ЖК «Ньютон»</h2>
+								<ul>
+									<li>Одно2двушки и двухо3трешки – больше места в каждом метре</li>
+									<li>Кухня, равная по площади комнате</li>
+									<li>Возможность изменения планировки в процессе строительства</li>
+								</ul>
+								<p>Эффективное использование пространства. Больше никаких маленьких проходных комнат, прихожих, в которые не влезает шкаф или уборных, где не помещается стиральная машина. В двухотрешке можно разместить функционал трехкомнатной квартиры и сэкономить.</p>
+								<p>Стены не являются несущими – легкая перепланировка, экономия денег и времени.</p>
+								<a href="#formCallback" class="btn open-popup">Убедиться самому</a>
+							</div>
+						</div>
+						<div class="swiper-slide flex-fluid">
+							<div class="col6">
+								<img src="/img/slider2.png" alt="" class="img-responsive">
+							</div>
+							<div class="col6 slider-content">
+								<h2 class="slider-content__title">Закон уюта и комфорта</h2>
+								<ul>
+									<li>Французские окна в пол</li>
+									<li>Утепленные лоджии</li>
+									<li>Панорамные окна с заниженным подоконником</li>
+								</ul>
+								<p>Житель «Ньютона» получает в подарок сразу два балкона – обычный и утепленную лоджию. Их площади не входят в общую площадь квартиры и не оплачиваются. Утепленная лоджия может превратиться в обеденную зону, библиотеку, детскую, кабинет или частный фитнес-зал.</p>
+								<a href="#formCallback" class="btn open-popup">Убедиться самому</a>
+							</div>
+						</div>
+						<div class="swiper-slide flex-fluid">
+							<div class="col6">
+								<img src="/img/slider3.png" alt="" class="img-responsive">
+							</div>
+							<div class="col6 slider-content">
+								<h2 class="slider-content__title">Функциональные и стильные парадные</h2>
+								<ul>
+									<li>Велосипедные, колясочные</li>
+									<li>Лапомойки для домашних животных</li>
+									<li>Зоны буккроссинга и мягкие диванчики</li>
+								</ul>
+								<p>Помните ощущения подъема велосипеда или коляски на верхний этаж? Жители ЖК «Ньютон» оставляют их в 
+									специальных комнатах на первом этаже. Лапомойки 
+									помогают сделать прогулку с собакой более удобной, зона буккроссинга и диванчики позволят с комфортом дождаться такси.</p>
+									<a href="#formCallback" class="btn open-popup">Убедиться самому</a>
+							</div>
+						</div>
+						<div class="swiper-slide flex-fluid">
+							<div class="col6">
+								<img src="/img/slider4.png" alt="" class="img-responsive">
+							</div>
+							<div class="col6 slider-content">
+								<h2 class="slider-content__title">«Ньютон Безопасность»</h2>
+								<ul>
+									<li>90 камер видеонаблюдения</li>
+									<li>Закрытая территория, система контроля доступа</li>
+									<li>Дежурный патруль</li>
+								</ul>
+								<p>Диспетчеры единого центра мониторинга наблюдают за жилым комплексом с помощью камер по всему периметру, быстро реагируют на внештатные ситуации и просьбы жителей. Например, можно попросить дежурного проводить до дома в темное время суток. Пеший патруль каждый день совершает обход по территории, работает участковый пункт полиции.</p>
+								<a href="#formCallback" class="btn open-popup">Убедиться самому</a>
+							</div>
+						</div>
+						<div class="swiper-slide flex-fluid">
+							<div class="col6">
+								<img src="/img/slider5.png" alt="" class="img-responsive">
+							</div>
+							<div class="col6 slider-content">
+								<h2 class="slider-content__title">Закон высокого качества жизни</h2>
+								<ul>
+									<li>Спуск на подземную парковку с любого этажа. Двор без машин</li>
+									<li>Школы, детские сады, поликлиника, филиал Дворца пионеров и школьников</li>
+									<li>Ньютон Сlub: мероприятия для детей и взрослых,
+										коворкинг, фитнес. Закрытый клуб</li>
+									<li>Монолитно-кирпичные дома, автономная система
+										отопления, самые высокие технологии</li>
+								</ul>
+								<a href="#formCallback" class="btn open-popup">Убедиться самому</a>
+							</div>
+						</div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="main-slider-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+					<div class="main-slider-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>							
+				</div>
+			</div>
+			<!-- Квартиры/поиск -->
+			<div id="apartments">
+				<h2 class="h2">Квартиры в ЖК Ньютон</h2>
+				<form class="search-block ajax-form">
+					<div class="search-block__form-group search-block__room">
+						<h3>Количество комнат</h3>
+						<div class="search-block__checkbox-wrap">
+							<label> 
+								<input type="checkbox" name="" checked>
+								<span>1</span>
+							</label>
+							<label> 
+								<input type="checkbox" name="" >
+								<span>2</span> 
+							</label>
+							<label> 
+								<input type="checkbox" name="" >
+								<span>3</span> 
+							</label>
+							<label> 
+								<input type="checkbox" name="">
+								<span>4+</span> 
+							</label>
+							<label> 
+								<input type="checkbox" name="">
+								<span>2 уровн.</span>
+							</label>
+						</div>
+					</div>
+					<div class="search-block__form-group search-block__deadline">
+						<h3>Срок сдачи</h3>
+						<select>
+							<option value="Не выбрано">Не выбрано</option>
+							<option value="Не выбрано">октябрь 2019</option>
+							<option value="Не выбрано">август 2019</option>
+							<option value="Не выбрано">ноябрь 2019</option>
+						</select>
+					</div>
+					<div class="search-block__form-group search-block__area">
+						<h3>Общая площадь, м<sup>2</sup></h3>
+						<div class="search-block__form-group-input-wrap">
+							<input type="text" placeholder="От">
+							<span>-</span>
+							<input type="text" placeholder="До">
+							<span>-</span>
+						</div>						
+					</div>
+					<div class="search-block__form-group search-block__price">
+						<h3>Цена, руб.</h3>
+						<div class="search-block__form-group-input-wrap">
+							<input type="text" placeholder="От" value="3500000">
+							<span>-</span>
+							<input type="text" placeholder="До" value="7500253">
+							<span>-</span>
+						</div>
+					</div>
+					<div class="search-block__form-group search-block__room">
+						<h3>Скидки</h3>
+						<div class="search-block__checkbox-wrap search-block__discount">
+							<label> 
+								<input id="mse2_tv|discount_yes" type="checkbox" name="">
+								<span>yes</span>
+							</label>
+						</div>
+					</div>					
+					<button type="submit" class="hidden">фильтровать</button>
+					<button type="reset" class="hidden">сброс</button>
+					<div class="search-block__btn-block">
+						<button type="submit" class="btn">Фильтровать</button>
+				</div>
+				</form>
+				<div id="mse2_results" class="hidden" style="opacity: 1;">
+					<div class=" result__item" data-title="3-к, ул. Ленина 310" data-text="В нашем комплексе каждый сможет найти свою идеальную квартиру. Ведь площадь каждой планировки рассчитана заранее – комнаты светлые и просторные, а их метраж напрямую соответствует функционалу.1" data-bathroom="Раздельный" data-floor="5/18" data-area="50" data-price="3500000 руб." data-pricem="50 000 руб." data-deadline="октябрь 2019" data-rooms="3 ком." data-roomss="3">
+						3-к, ул. Ленина 310
+						<div class="apartments-Slider">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider1.png" alt="Заголовок1">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider2.png" alt="Заголовок1">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider3.png" alt="заголовок1">
+						</div>
+					</div>
+					<div class="result__item" data-title="2-к, ул. Ленина 310" data-text="В нашем комплексе каждый сможет найти свою идеальную квартиру. Ведь площадь каждой планировки рассчитана заранее – комнаты светлые и просторные, а их метраж напрямую соответствует функционалу.2" data-bathroom="Раздельный" data-floor="5/18" data-area="50" data-price="3250000 руб." data-pricem="50 000 руб." data-deadline="октябрь 2019" data-rooms="2 ком." data-roomss="2||4">2-к, ул. Ленина 310
+						<div class="apartments-Slider">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider1.png" alt="Заголовок2">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider2.png" alt="Заголовок2">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider3.png" alt="заголовок2">
+						</div>
+					</div>
+					<div class="result__item" data-title="3-к, ул. Ленина 310" data-text="В нашем комплексе каждый сможет найти свою идеальную квартиру. Ведь площадь каждой планировки рассчитана заранее – комнаты светлые и просторные, а их метраж напрямую соответствует функционалу." data-bathroom="Раздельный" data-floor="6/18" data-area="50" data-price="2500000 руб." data-pricem="50 000 руб." data-deadline="дом сдан" data-rooms="1 ком." data-roomss="1">3-к, ул. Ленина 310
+						<div class="apartments-Slider">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider1.png" alt="Заголовок3">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider2.png" alt="Заголовок3">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider3.png" alt="заголовок3">
+						</div>
+					</div>
+					<div class="result__item" data-title="4-к, ул. Ленина 310" data-text="В нашем комплексе каждый сможет найти свою идеальную квартиру. Ведь площадь каждой планировки рассчитана заранее – комнаты светлые и просторные, а их метраж напрямую соответствует функционалу." data-bathroom="Раздельный" data-floor="6/18" data-area="70" data-price="4500000 руб." data-pricem="50 000 руб." data-deadline="август 2019" data-rooms="4 ком." data-roomss="4||5">4-к, ул. Ленина 310
+						<div class="apartments-Slider">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider1.png" alt="Заголовок4">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider2.png" alt="Заголовок4">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider3.png" alt="заголовок4">
+						</div>
+					</div>
+					<div class="result__item" data-title="5-к, ул. Ленина 310" data-text="В нашем комплексе каждый сможет найти свою идеальную квартиру. Ведь площадь каждой планировки рассчитана заранее – комнаты светлые и просторные, а их метраж напрямую соответствует функционалу." data-bathroom="Раздельный" data-floor="5/18" data-area="30" data-price="3500000 руб." data-pricem="50 000 руб." data-deadline="август 2019" data-rooms="5 ком." data-roomss="4">5-к, ул. Ленина 310
+						<div class="apartments-Slider">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider1.png" alt="Заголовок5">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider2.png" alt="Заголовок5">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider3.png" alt="заголовок5">
+						</div>
+					</div>
+					<div class="result__item" data-title="2-к, ул. Ленина 310" data-text="В нашем комплексе каждый сможет найти свою идеальную квартиру. Ведь площадь каждой планировки рассчитана заранее – комнаты светлые и просторные, а их метраж напрямую соответствует функционалу." data-bathroom="Раздельный" data-floor="18/18" data-area="170" data-price="7500000 руб." data-pricem="50 000 руб." data-deadline="дом сдан" data-rooms="2 ком." data-roomss="2">2-к, ул. Ленина 310
+						<div class="apartments-Slider">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider1.png" alt="Заголовок6">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider2.png" alt="Заголовок6">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider3.png" alt="заголовок6">
+						</div>
+					</div>
+					<div class="result__item" data-title="2-к, ул. Ленина 310" data-text="В нашем комплексе каждый сможет найти свою идеальную квартиру. Ведь площадь каждой планировки рассчитана заранее – комнаты светлые и просторные, а их метраж напрямую соответствует функционалу." data-bathroom="Раздельный" data-floor="1/18" data-area="100" data-price="1500000 руб." data-pricem="50 000 руб." data-deadline="ноябрь 2019" data-rooms="2 ком." data-roomss="2">2-к, ул. Ленина 310
+						<div class="apartments-Slider">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider1.png" alt="Заголовок7">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider2.png" alt="Заголовок7">
+							<img style="width: 50px;" class="apartments-slide img-responsive" src="/images/Apartments/apartment-slider3.png" alt="заголовок7">
+						</div>
+					</div>
+				</div>
+				<div class="apartments-list flex-fluid">
+					<div id="apartments-tab-item-wrap" >
+
+					</div>
+					<div id="apartments-pane-item-wrap">
+							
+					</div>
+				</div>
+			</div>
+			<!-- Варианты оплаты -->
+			<div id="payment">
+				<h2 class="h2">Варианты оплаты</h2>
+				<div class="flex-fluid">
+					<div class="payment-item tab">
+						<div class="payment-item__img">
+							<img src="/img/payment1.png" alt="">
+						</div>
+						<div class="payment-item__description">Меняем старую квартиру на новую</div>
+					</div>
+					<div class="payment-item tab">
+						<div class="payment-item__img">
+							<img src="/img/payment2.png" alt="">
+						</div>
+						<div class="payment-item__description">Честная субсидированная ипотека 6% для всех</div>
+					</div>
+					<div class="payment-item tab">
+						<div class="payment-item__img">
+							<img src="/img/payment3.png" alt="">
+						</div>
+						<div class="payment-item__description">Беспроцентный займ под материнский капитал</div>
+					</div>
+					<div class="payment-item tab">
+						<div class="payment-item__img">
+							<img src="/img/payment4.png" alt="">
+						</div>
+						<div class="payment-item__description">Другие варианты оплаты</div>
+					</div>
+				</div>
+				<div class="panes">
+					<div class="pane">
+						<h2 class="hidden-up-md" > Меняем старую квартиру на новую</h2>
+
+						<h3>Не откладывайте жизнь в квартире мечты!</h3>
+						<ul>
+							<li>Ипотека без первоначального взноса и ежемесячных платежей</li>
+							<li>Беспроцентный займ на полгода, 12,1% на год</li>
+							<li>Продадим старую квартиру без комиссии</li>
+						</ul>
+						<p>ЖК «Ньютон» предоставляет займ на первоначальный взнос в размере от 10 до 50%. В случае погашения кредита в течении полугода проценты начислены не будут. Никаких ежемесячных платежей – деньги возвращаются за счет продажи старой квартиры в конце срока. Максимальный размер займа составляет до 70% от рыночной стоимости вторичного жилья, которое служит залоговым обеспечением, но не более 50% от стоимости новой квартиры. Одновременно с займом оформляется ипотека от 50 до 90% от стоимости новой квартиры.</p>
+						<div class="btn-wrap">
+							<a href="#" class="btn open-payment" data-description="Меняем старую квартиру на новую">Узнать подробнее</a>
+						</div>
+					</div>
+					<div class="pane">
+						<h3>Условия:</h3>
+						<ul>
+							<li>Покупка квартиры на этапе строительства</li>
+							<li>Возраст от 21 до 65 лет (на дату погашения кредита)</li>
+							<li>Не менее 6 месяцев на последнем месте работы или безубыточная предпринимательская деятельность не менее 2х лет</li>
+							<li>Сумма кредита 500 000 — 10 000 000 рублей, до 80% от стоимости квартиры</li>
+						</ul>
+						<div class="table">
+							<div class="row">
+								<div class="colg-9">Первоначальный взнос</div>
+								<div class="colg-3">Ставка</div>
+							</div>
+							<div class="row">
+								<div class="colg-9">50%</div>
+								<div class="colg-3">6.0%</div>
+							</div>
+							<div class="row">
+								<div class="colg-9">30%</div>
+								<div class="colg-3">6.75%</div>
+							</div>
+							<div class="row">
+								<div class="colg-9">20%</div>
+								<div class="colg-3">7.0%</div>
+							</div>
+						</div>
+						<div class="btn-wrap">
+							<a href="#" class="btn open-payment" data-description="Честная ипотека 6% для всех">Узнать подробнее</a>
+						</div>
+					</div>
+					<div class="pane">
+						<ul>
+							<li>Не нужно ждать, пока ребенку исполнится 3 года</li>
+							<li>Не нужно подтверждать доходы и занятость</li>
+							<li>Никаких дополнительных расходов, кроме 1000 рублей за перевод банком</li>
+							<li>Займ под 0% годовых на срок 5 месяцев</li>
+							<li>Упрощенная процедура получения кредита без оценки квартиры и составления закладной</li>
+							<li>Никаких ежемесячных платежей</li>
+						</ul>
+						<p>Также материнский капитал можно использовать в качестве первоначального взноса и суммы погашения кредита по ипотеке, а также в качестве дополнительных средств при приобретении квартиры за наличные</p>
+						<div class="btn-wrap">
+							<a href="#" class="btn open-payment" data-description="Беспроцентный займ под материнский капитал">Узнать подробнее</a>
+						</div>
+					</div>
+					<div class="pane">
+						<ul>
+							<li>Ипотека от ведущих банков-партнеров от 7,4% (Сбербанк, ВТБ, Челинбанк, Абсолютбанк,Уралсиб, Промсвязьбанк, Газпромбанк, Россельхозбанк, банк Российский капитал, СМП банк, Райфайзенбанк, АК БАРС банк, Дельта кредит банк, Уральский банк реконструкции и развития</li>
+							<li>Военная ипотека</li>
+							<li>Рассрочка</li>
+						</ul>
+						<div class="btn-wrap">
+							<a href="#" class="btn open-payment" data-description="Другие варианты оплаты">Узнать подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Форма -->
+			<div id="callback">
+				<h2 class="h2">Записаться на бесплатную экскурсию</h2>
+				<form id="callback-form">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Ньютон">
+					<input type="hidden" name="admin_email" value="andr.govoruhin@gmail.com">
+					<input type="hidden" name="form_subject" value="Сообщение с формы">
+					<!-- END Hidden Required Fields -->
+					<div class="flex-fluid">
+						<div class="col4-sm-12 "><input type="text" name="Имя" placeholder="Имя*" required></div>
+						<div class="col4-sm-12 "><input type="text" name="Номер телефона" placeholder="Номер Телефона*" required></div>
+						<div class="col4-sm-12 "><button class="btn">Отправить</button></div>			
+					</div>
+					<div class="flex-fluid checkbox-wrap">
+						<div class="col">
+							<input class="checkbox" id="checkbox-form-callback" type="checkbox" checked required>
+							<label for="checkbox-form-callback">Согласен с <a href="http://forumreal.ru/privacy-policy/">условиями политики обработки данных</a></label>
+						</div>
+					</div>
+				</form>				
+			</div>
+			<!-- footer -->
+			<footer>
+				<p>Все права защищены © 2018 <br> Данное предложение не является публичной офертой</p>
+			</footer>
+		</div>
+	</div>
+
+	<!-- общая форма   -->
+	<div class="hidden">
+		<div id="formCallback" class="form-popup">
+			<form id="form_callback-popup" class="popup">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Ньютон">
+				<input type="hidden" name="admin_email" value="andr.govoruhin@gmail.com">
+				<input type="hidden" id="form-subject" name="form_subject" value="Заявка с сайта">
+				<!-- END Hidden Required Fields -->
+				<div class="flex-fluid form-popup__form-group">
+					<div class="col6">
+						<input type="text" name="Имя" placeholder="Имя*" required>
+					</div>
+					<div class="col6">
+						<input type="text" name="Номер телефона" placeholder="Номер телефона*" required>
+					</div>
+				</div>
+				<div class="flex-fluid form-popup__checkbox-wrap">
+					<div class="col">
+						<input class="checkbox" id="checkbox-form-callback" type="checkbox" checked required>
+						<label for="checkbox-form-callback">Согласен с <a href="http://forumreal.ru/privacy-policy/">условиями политики обработки данных</a></label>
+					</div>
+				</div>
+				<div class="form-popup__btn-wrap">
+					<button class="btn">Отправить заявку</button>			
+				</div>
+			</form>			
+		</div>
+	</div>
+	<!-- Экскурсия -->
+	<div class="hidden">
+		<div id="form-excursion" class="form-popup">
+			<div class="form-popup__content">
+				<h2 class="form-popup__title">Бесплатная экскурсия в ЖК «Ньютон»</h2>
+				<ul class="form-popup__list">
+					<li>Осмотр квартир без отделки и с отделкой</li><br>
+					<li>40 минут жизни в «Ньютоне»</li><br>
+					<li>В удобное для Вас время</li>
+				</ul>
+			</div>
+			<form id="form_excursion-popup" class="popup">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Ньютон">
+				<input type="hidden" name="admin_email" value="andr.govoruhin@gmail.com">
+				<input type="hidden" id="form-subject" name="form_subject" value="Заявка на экскурсию">
+				<!-- END Hidden Required Fields -->
+				<div class="flex-fluid form-popup__form-group">
+					<div class="col6">
+						<input type="text" name="Имя" placeholder="Имя*" required>
+					</div>
+					<div class="col6">
+						<input type="text" name="Номер телефона" placeholder="Номер телефона*" required>
+					</div>
+				</div>
+				<div class="flex-fluid form-popup__checkbox-wrap">
+					<div class="col">
+						<input class="checkbox" id="checkbox-form-callback" type="checkbox" checked required>
+						<label for="checkbox-form-callback">Согласен с <a href="http://forumreal.ru/privacy-policy/">условиями политики обработки данных</a></label>
+					</div>
+				</div>
+				<div class="form-popup__btn-wrap">
+					<button class="btn">Записаться</button>			
+				</div>
+			</form>			
+		</div>
+	</div>
+	<!-- Акция -->
+	<div class="hidden">
+		<div id="form-share" class="form-popup">
+			<div class="form-popup__content form-popup__content-share">
+				<h2 class="form-popup__title">Дарим 5000 рублей</h2>
+				<p>на бытовую технику при покупке квартиры в ЖК «Ньютон» до <span class="red">31 августа!</span> </p>
+				<div class="form-popup__img"></div>
+			</div>
+			<form id="formshare-popup" class="popup">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Ньютон">
+				<input type="hidden" name="admin_email" value="andr.govoruhin@gmail.com">
+				<input type="hidden" name="form_subject" value="Заявка на экскурсию">
+				<!-- END Hidden Required Fields -->
+				<div class="flex-fluid form-popup__form-group">
+					<div class="col6">
+						<input type="text" name="Имя" placeholder="Имя*" required>
+					</div>
+					<div class="col6">
+						<input type="text" name="Номер телефона" placeholder="Номер телефона*" required>
+					</div>
+				</div>
+				<div class="flex-fluid form-popup__checkbox-wrap">
+					<div class="col">
+						<input class="checkbox" id="checkbox-form-callback" type="checkbox" checked required>
+						<label for="checkbox-form-callback">Согласен с <a href="http://forumreal.ru/privacy-policy/">условиями политики обработки данных</a></label>
+					</div>
+				</div>
+				<div class="form-popup__btn-wrap">
+					<button class="btn">Записаться</button>			
+				</div>
+			</form>			
+		</div>
+	</div>
+
+
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

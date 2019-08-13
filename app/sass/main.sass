@@ -1,0 +1,1079 @@
+@import "flexbox/flex"
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "grid"
+@import "baze"
+
+//
+	// +col()
+	// +col-sm(6,no)
+	// +col-md(6,no)
+	// +col-lg(4,no)
+	// +col-xl(4,no)
+	// +col-xs(12,no)	
+
+//	
+.wrapper
+	+grid(fluid)
+	width: 100%
+	max-width: 1920px
+	margin: auto
+	.sidebar
+		+col-sm(12,no)
+		+col-md(12,no)
+		+col-lg(3,no)
+		+col-xl(2,no)
+		+col-xs(12,no)	
+	.content	
+		+col-sm(12,no)
+		+col-md(12,no)
+		+col-lg(9,no)
+		+col-xl(10,no)
+		+col-xs(12,no)
+
+.sidebar
+	position: relative
+	&__content
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		text-align: center
+		background-color: #fff
+		z-index: 99
+		+grid(fluid)
+		+media-md(down)
+			max-width: 100%		
+		padding:
+			left: $padding / 2
+			right: $padding / 2
+			top: 10px
+			bottom: 10px
+		flex-direction: row
+		//box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.3)
+		justify-content: space-between
+		+media-lg(up)
+			justify-content: flex-start
+			//box-shadow: none
+			flex-direction: column
+			position: sticky
+			top: 0
+			width: 100%
+			padding:
+				left: 0
+				right: 0
+				top: 40px		
+	.logo
+		display: inline-block
+		img 
+			margin: auto
+	.menu-block
+		.hamburger-wrap
+			display: block
+			position: relative
+			top: 10px
+			right: 5px
+			+media-lg(up)
+				display: none
+		.navigation
+			display: none
+			+media-lg(up)
+				display: block
+			.phone
+				font-size: 16px
+				text-decoration: none
+				border-bottom: 1px solid #ffffff 
+				color: $text
+				transition: $trans
+				&:hover,&:focus
+					border-bottom-color: #b5b5b5
+				+media-lg(up)
+					display: none							
+			.menu
+				padding: 0
+				margin: 0
+				margin: 30px 0 10px
+				+media-lg(up)
+					margin: 45px 0 75px
+				li 
+					list-style-type: none
+				&__link		
+					text-decoration: none
+					color: $text
+					transition: $trans
+					display: block
+					padding: 10px 0
+					+media-lg(up)
+						padding: 15px 0
+					&:hover,&focus 
+						text-decoration: none
+						color: #b5b5b5
+				.is-active 
+					text-decoration: none
+					color: #b5b5b5	
+		.open
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			background-color: #fff	
+			top: 59px
+			height: 100vh
+			+media-lg(up)
+				height: auto
+				position: static							
+	.contacts
+		display: none
+		+media-lg(up)
+			display: block
+		.phone
+			font-size: 16px
+			text-decoration: none
+			border-bottom: 1px solid #ffffff 
+			color: $text
+			transition: $trans
+			&:hover,&:focus
+				border-bottom-color: #b5b5b5
+			+media-lg(up)
+				display: inline-block
+		.title
+			+media-md(up)
+				display: block			
+
+.content									
+	padding-top: 60px
+	+media-lg(up)
+		padding-top: 0
+
+.main-header
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	padding-bottom: 50px
+	min-height: 100vh
+	+media-lg(up)
+		height: 100vh
+		min-height: 0
+	&__bottom-line
+		position: absolute
+		bottom: 0
+		height: 50px
+		left: 0
+		right: 0
+		background-color: $bg
+		text-align: center
+		.fa
+			color: #ffffff
+			font-size: 30px
+			line-height: 50px
+	&__item
+		display: block
+		color: #ffffff
+		text-decoration: none
+		overflow: hidden
+		position: relative
+		min-height: 200px
+		+col-sm(6,no)
+		+col-md(4,no)
+		+col-lg(4,no)
+		+col-xl(4,no)
+		+col-xs(12,no)
+		+media-lg(up)
+			min-height: 0
+		&:first-of-type
+			+col-sm(12,no)
+			+col-md(8,no)
+			+col-lg(8,no)
+			+col-xl(8,no)
+			+col-xs(12,no)
+		&-content
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			padding-left: 15px
+			padding-bottom: 20px
+			padding-right: 10px
+			+media-lg(up)
+				padding-left: 30px
+				padding-bottom: 30px			
+			&-title
+				font-family: $title-font
+				margin: 0
+				font-weight: bold
+				font-size: 18px
+				+media-md(up)
+					font-size: 20px
+				+media-lg(up)
+					font-size: 18px				
+				+media-xl(up)
+					font-size: 24px
+				+media-xs(down)
+					font-size: 24px	
+			&-description
+				font-family: $title-font
+				font-size: 16px
+				margin: 0
+				+media-lg(up)
+					font-size: 16px
+				+media-xl(up)
+					font-size: 18px
+				+media-xs(down)
+					font-size: 18px														
+		&-img 
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-size: cover
+			background-position: center
+			transition: all .3s ease
+		&:hover .main-header__item-img, &:focus .main-header__item-img
+			transform: scale(1.1,1.1)							
+
+
+.news
+	&__item
+		padding-top: 25px
+		padding-bottom: 0px
+		+media-md(up)
+			padding-bottom: 30px
+	&__title
+		font-weight: bold
+		margin: 0
+		margin-bottom: 10px
+		&::after
+			content: ''
+			display: block
+			height: 3px
+			width: 80px
+			background-color: $accent
+			margin-top: 10px
+	.date
+	p				
+		line-height: 20px
+		margin-top: 7px
+
+#slider
+	padding-bottom: 30px
+	.swiper-button-next, .swiper-button-prev 
+		background-size: cover
+		+media-xs(down)
+			width: 9px
+			height: 16px
+		+media-xs(up)
+			height: 26px
+			width: 18px	
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 20px
+		background-color: #f3f3f3
+	.swiper-slide
+		& > div:first-child
+			margin-left: 0
+			+media-xs(down)
+				margin-left: 15px	
+			+media-xl(up)
+				flex-basis: auto
+		& > div:last-child
+			+media-xl(up)
+				flex-basis: auto					
+	.swiper-button-next
+		right: 10px	
+	.swiper-button-prev
+		left: 30px
+		+media-xs(down)
+			left: 10px
+	.main-slider		
+		&-next, &-prev
+			position: absolute
+			top: 50%
+			width: 1px
+			height: 1px
+			z-index: 10
+			i 
+				width: 35px
+				height: 35px
+				cursor: pointer
+				background-color: $accent
+				border-radius: 50%
+				text-align: center
+				line-height: 35px
+				position: absolute
+				top: -14px
+				opacity: 0.8
+				+media-xs(down)
+					width: 25px
+					height: 25px
+					line-height: 25px
+				&:hover,&:focus
+					opacity: 1
+					transition: $trans
+				&::before
+					color: #ffffff
+					font-size: 26px	
+					+media-xs(down)
+						font-size: 20px										
+		&-prev
+			left: 30px
+			right: auto
+			+media-xs(down)
+				left: 10px
+			i 
+				left: 0			
+		&-next							
+			right: 10px
+			left: auto
+			i 
+				right: 0			
+	img
+		+media-xs(down)
+			margin: auto
+	ul 
+		margin: 0
+		padding: 0
+		margin-bottom: 20px
+		li 
+			list-style-type: none
+			position: relative
+			font-weight: bold
+			font-size: 16px	
+			margin: 
+				top: 10px
+				bottom: 10px
+			+media-xs(down)
+				padding-left: 10px	
+			&::before
+				content: ""
+				display: block
+				width: 13px
+				height: 13px
+				background-image: url(/img/apple-icon.png)
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				position: absolute
+				left: -22px
+				top: 6px			
+				+media-xs(down)
+					left: -10px
+	.slider-content
+		padding-top: 40px
+		padding-left: 20px
+		+media-xs(down)
+			padding-left: 0
+		&__title
+			font-size: 24px
+			margin-bottom: 30px
+			font-family: $title-font
+			margin-top: 0		
+		.btn
+			margin-top: 25px	
+
+
+#aprtmennt 
+.search-block
+	background: $bg
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	position: relative
+	padding-bottom: 10px
+	.jq-selectbox
+		width: 100%
+		max-width: 165px
+		cursor: pointer
+		position: relative
+		&__select
+			background: #ffffff
+			line-height: 34px
+			padding-left: 13px
+			padding-right: 34px
+			position: relative
+			&::before
+				content: "\f107"
+				color: $accent
+				font-family: FontAwesome
+				position: absolute
+				right: 0
+				top: 0
+				width: 34px
+				height: 34px
+				text-align: center
+		&__dropdown
+			background: #ffffff
+			right: 0
+			left: 0
+			ul 
+				padding-left: 0
+				margin-bottom: 0
+				margin-top: 0
+				li 
+					padding-left: 15px
+					padding:
+						top: 5px
+						bottom: 5px
+					transition: $trans	
+					&:hover,&:focus
+						background: darken($accent, 10%)
+						color: #ffffff	
+				.selected
+					&:hover,&:focus
+						background: $accent
+						color: #ffffff	
+				.sel
+					background: $accent
+					color: #ffffff
+
+	h3 
+		color: #ffffff	
+		font-weight: normal
+		margin-bottom: 5px
+		margin-top: 0
+	&__form-group
+		padding: 8px 15px
+		// flex: 1
+		align-items: center	
+		border: none
+		&-input-wrap
+			display: flex
+			flex-wrap: nowrap
+			width: 100%
+			span 
+				width: 17px
+				color: #ffffff
+				text-align: center
+				line-height: 34px
+				&:last-of-type
+					display: none	
+			input
+				flex-grow: 1
+				width: 100%
+				max-width: 70px
+				display: block
+				border: none
+				padding-left: 13px
+				padding-right: 10px
+				line-height: 34px
+	&__checkbox-wrap
+		display: flex
+		input 
+			display: none
+			&:checked + span 
+				background: $accent
+				color: #ffffff
+		span 
+			border-radius: 0px
+			background-color: #fff
+			cursor: pointer
+			min-width: 34px
+			text-align: center
+			transition: $trans
+			font-size: 14px
+			padding: 0 10px
+			line-height: 34px
+			display: inline-block 
+		label
+			margin-right: 1px
+			&:last-child
+				margin-right: 0 
+	&__room
+		// flex-basis: 130px
+		// flex-grow: 1
+		// +col()
+		// +col-sm(6,no)
+		// +col-md(3,no)
+		// +col-lg(3,no)
+		// +col-xl(3,no)
+		// +col-xs(6,no)			
+	&__deadline
+		// +col()
+		// +col-sm(6,no)
+		// +col-md(3,no)
+		// +col-lg(3,no)
+		// +col-xl(3,no)
+		// +col-xs(6,no)			
+	&__area
+		// +col()
+		// +col-sm(6,no)
+		// +col-md(3,no)
+		// +col-lg(3,no)
+		// +col-xl(3,no)
+		// +col-xs(6,no)			
+	&__price
+		// +col()
+		// +col-sm(6,no)
+		// +col-md(3,no)
+		// +col-lg(3,no)
+		// +col-xl(3,no)
+		// +col-xs(6,no)	
+	input
+		max-width: 86px	
+	&__btn-block
+		padding-top: 38px
+		.btn
+			border: none
+			cursor: pointer					
+#apartments
+	padding-bottom: 30px
+#apartments-tab-item-wrap
+	padding-bottom: 15px
+	+col()
+	+col-sm(12,no)
+	+col-md(12,no)
+	+col-lg(12,no)
+	+col-xl(7,no)
+	+col-xs(12,no)	
+#apartments-pane-item-wrap
+	+col()
+	+col-sm(12)
+	+col-md(12)
+	+col-lg(12)
+	+col-xl(5)
+	+col-xs(12)					
+.apartments-list
+	padding-top: 15px
+	&__item.is-active
+		border: 1px solid rgba(0,0,0,0.1)
+	&__item
+		background-color: #f3f3f3
+		padding-top: 15px
+		padding-bottom: 15px
+		z-index: 0
+		position: relative
+		transition: $trans
+		border: 1px solid rgba(0,0,0,0)
+		cursor: pointer
+		color: $text
+		text-decoration: none
+		&:hover,&:focus
+			border: 1px solid rgba(0,0,0,0.1)
+		& > div 
+			padding-left: 20px
+			padding-right: 15px
+		&:nth-of-type(2n)
+			background-color: #fff
+		&-rooms 
+			max-width: 100px
+			+media-xs(down)
+				max-width: 92px			
+		&-area 
+			max-width: 100px
+			+media-xs(down)
+				max-width: 81px
+		&-floor
+			max-width: 110px
+			+media-xs(down)
+				display: none
+		&-deadline
+			text-align: center
+			+media-xs(down)
+				display: none			
+		&-price 
+			text-align: center		
+	span.red 
+		font-weight: bold		
+
+.apartment-info-item
+	display: none
+	margin: auto
+	max-width: 600px
+	&__slider 
+		.img-responsive
+			margin: auto
+			width: 100%
+		&-next, &-prev
+			position: absolute
+			top: 50%
+			width: 1px
+			height: 1px
+			z-index: 10
+			i 
+				width: 26px
+				height: 26px
+				cursor: pointer
+				background-color: #fff
+				border-radius: 50%
+				text-align: center
+				line-height: 26px
+				position: absolute
+				top: -14px												
+		&-prev
+			left: 10px
+			right: auto
+			i 
+				left: 0			
+		&-next							
+			right: 10px
+			left: auto
+			i 
+				right: 0	
+	&__top-info
+		padding-top: 15px
+		padding-bottom: 15px
+		border-bottom: 1px solid #e7e7e7
+		span 
+			display: block
+		&-title 
+			font-weight: bold
+			font-size: 16px
+			+media-xs(down)
+				font-size: 14px
+		&-left 
+			flex-grow: 2
+			+media-xs(down)
+				flex-grow: 1
+		&-right 
+			flex-basis: 0
+			+media-xs
+				max-width: 150px
+			//width: 150px							
+	&__bottom-info
+		padding-top: 15px
+		padding-bottom: 15px
+		border-bottom: 1px solid #e7e7e7					
+		span 
+			display: block
+		&-title 
+			font-weight: bold
+			font-size: 14px	
+	&__btn-block
+		display: flex	
+		flex-wrap: wrap
+		justify-content: space-around	
+		.btn 
+			max-width: 168px
+			text-align: center
+			line-height: 14px
+			padding-top: 12px
+			padding-bottom: 12px
+			margin-top: 5px
+			cursor: pointer
+			&:last-child 
+				padding-top: 5px
+				padding-bottom: 5px
+	&__phone-block
+		text-align: center
+		padding-top: 15px
+		padding-bottom: 15px
+		a 
+			text-decoration: none
+			color: $text
+			border-bottom: 1px solid #fff
+			transition: $trans
+			font-weight: bold
+			font-size: 16px
+			&:hover,&:focus
+				text-decoration: none
+				color: $text			
+				border-bottom-color: $text
+.apartment-info-item.is-active 
+	display: block				
+
+#payment
+	text-align: center			
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 20px
+		background-color: #f3f3f3
+	.payment-item
+		background-color: #ffffff
+		border-bottom: 12px solid #ffffff
+		transition: $trans
+		+col-sm(3,no)
+		+col-md(3,no)
+		+col-lg(3,no)
+		+col-xl(3,no)
+		+col-xs(3,no)
+		&:hover,&:focus
+			background-color: #f3f3f3
+			border-bottom: 12px solid $bg
+		&__img
+			display: flex
+			height: 112px
+			+media-xs(down)
+				height: 90px
+			+media-lg(up)
+				height: 160px
+			img
+				max-width: 100%
+				height: auto
+				margin: auto
+				width: 66px
+				+media-xs(down)
+					width: 50px
+				+media-lg(up)
+					max-width: 100%
+					width: auto
+		&__description		
+			font-weight: bold
+			font-size: 14px
+			margin-bottom: 30px
+			padding-left: 10px
+			padding-right: 10px
+			display: none
+			+media-xs(down)
+				display: none
+			+media-md(up)
+				display: inline-block	
+			+media-lg(up)
+				font-size: 16px
+	.payment-item.is-active
+		background-color: #f3f3f3
+		border-bottom: 12px solid $bg				
+	.panes
+		background-color: $bg
+		padding: 20px 15px 30px 30px
+		text-align: left
+		+media-xs(down)
+			padding-left: 15px
+		.pane 
+			transition: $trans
+			display: none
+			opacity: 0
+			color: #ffffff
+			h2 
+				font-size: 22px
+				margin-top: 10px
+			.btn-wrap
+				text-align: center
+				margin-top: 20px
+			ul 
+				margin: 0
+				padding: 0
+				padding-left: 30px
+				li 
+					list-style-type: none
+					position: relative
+					margin: 
+						top: 10px
+						bottom: 10px
+					&::before
+						content: ""
+						display: block
+						width: 20px
+						height: 21px
+						background-image: url(/img/apple-border-icon.png)
+						background-size: cover
+						background-repeat: no-repeat
+						background-position: center
+						position: absolute
+						left: -30px
+						top: 0px				
+		.is-active
+			display: block
+			opacity: 1	
+
+.table
+	width: 100%
+	max-width: 340px
+	margin-top: 30px
+	.row
+		display: flex
+		background-color: #474747
+		border-bottom: 1px solid #737373
+		color: #d0cfcf
+		&:first-of-type 
+			background-color: #5b5b5b
+			border-bottom: 1px solid #474747
+			div:first-child
+				color: #d0cfcf
+		&:last-of-type
+			border-bottom: none	
+		div:first-child
+			border-right: 1px solid #737373	
+			color: #ffffff
+		div 
+			padding: 
+				left: 15px
+				top: 7px
+				bottom: 7px
+#callback
+	text-align: center
+	background-image: url(/img/callback.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	padding-top: 25px
+	padding-bottom: 60px
+	.h2
+		margin-bottom: 30px
+		+media-xs(down)
+			font-size: 20px
+#callback-form
+	display: block
+	margin: auto
+	width: 100%
+	max-width: 800px	
+	text-align: center
+	+media-md(up)
+		text-align: left
+	input[type="text"]
+		border: none
+		border-radius: 30px
+		width: 100%
+		padding: 0 20px
+		line-height: 38px
+		font-family: $default-font
+		margin-bottom: 15px
+		max-width: 250px
+	::placeholder
+		color: #a7a7a7	
+	button
+		box-shadow: none
+		border: none
+		width: 100%
+		cursor: pointer	
+		line-height: 38px		
+		padding-top: 0
+		padding-bottom: 0
+		font-family: $default-font
+		max-width: 250px
+	.checkbox-wrap
+		margin-top: 15px	
+	.checkbox
+		position: absolute
+		z-index: -1
+		opacity: 0
+		margin: 10px 0 0 20px
+		&:focus
+			& + label
+				&:before
+					box-shadow: inset 0 2px 3px rgba(175,18,37,.2)
+		& + label
+			position: relative
+			padding: 0 0 0 30px
+			cursor: pointer
+			font-size: 14px
+			margin-bottom: 0
+			color: #a7a7a7
+			a
+				text-decoration: none
+				color: $accent
+				border-bottom: 1px solid $accent
+				transition: .3s ease
+				&:hover,&:focus
+					border-bottom: none
+			&:before
+				content: ''
+				position: absolute
+				top: 0px
+				left: 0
+				width: 19px
+				height: 19px
+				border-radius: 3px
+				background: #d7d7d7
+				transition: .2s
+			&:after
+				content: ""
+				font-family: FontAwesome 	
+				position: absolute
+				font-size: 14px
+				top: 0px
+				left: 3px
+				transition: .2s
+				color: #3f3f3f
+		&:checked
+			& + label
+				&:before
+					background: #d7d7d7
+				&:after
+					content: '\f00c'
+
+
+
+footer 
+	background-color: $bg
+	text-align: left
+	padding-left: 30px
+	padding-top: 15px
+	padding-bottom: 15px
+	+media-xs(down)
+		padding-left: 15px
+	p 
+		margin: 0
+		font-size: 12px
+		color: #949494				
+							
+
+.swal-modal
+	.swal-button
+		background-color: $accent
+		border-radius: 2px
+		border: 1px solid $accent							
+
+.ui-state-default, .ui-widget-content .ui-state-default
+	cursor: pointer
+span.ui-state-active
+	background-color: $accent
+	border-color: $accent
+
+#mse2_mfilter > button.btn.btn_more
+	border: none
+	width: auto
+	cursor: pointer
+
+.form-popup
+	width: 100%	
+	background-color: #fff
+	max-width: 615px
+	margin: auto
+	position: relative
+	&__title
+		font-weight: bold
+		font-size: 24px
+		font-family: $title-font
+		margin-top: 0
+		+media-xs(down)
+			font-size: 20px
+	&__content
+		text-align: center
+		padding-top: 35px
+		padding-left: 15px
+		padding-right: 15px
+		position: relative
+		+media-xs(down)
+			padding-top: 20px
+		p 
+			font-size: 16px
+			+media-xs(down)
+				font-size: 14px	
+		.red 
+			font-weight: bold	
+	&__content-share
+		text-align: left
+		padding-bottom: 20px
+		padding-left: 185px
+		+media-xs(down)
+			padding-left: 15px
+	&__img
+		position: absolute
+		left: 45px
+		top: 0
+		background-image: url(/img/form-popup-img.png)
+		width: 104px
+		height: 197px
+		background-repeat: no-repeat
+		background-size: cover
+		+media-xs(down)
+			display: none
+	&__list
+		margin: 0
+		padding: 0
+		margin-bottom: 20px
+		+media-xs(down)
+			text-align: left
+		li 
+			list-style-type: none
+			position: relative
+			font-weight: bold
+			font-size: 16px
+			display: inline-block
+			padding-left: 20px	
+			margin: 
+				top: 10px
+				bottom: 10px
+			&::before
+				content: ""
+				display: block
+				width: 13px
+				height: 13px
+				background-image: url(/img/apple-icon.png)
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				position: absolute
+				left: 0px
+				top: 6px			
+	&__form-group
+		input
+			width: 100%
+			background-color: #fff
+			line-height: 40px
+			padding-left: 15px
+			padding-right: 10px
+			border: none
+			border-radius: 19px
+			margin-bottom: 10px
+		::placeholder 
+			color: #a7a7a7
+	&__checkbox-wrap
+		margin-top: 10px
+	&__btn-wrap
+		text-align: center
+		margin-top: 23px
+		button 
+			border: none
+			cursor: pointer
+	form
+		background-image: url(/img/callback.png) 
+		background-size: cover
+		background-position: center
+		padding: 30px
+		padding-top: 35px
+	.checkbox
+		position: absolute
+		z-index: -1
+		opacity: 0
+		margin: 10px 0 0 20px
+		&:focus
+			& + label
+				&:before
+					box-shadow: inset 0 2px 3px rgba(175,18,37,.2)
+		& + label
+			position: relative
+			padding: 0 0 0 30px
+			cursor: pointer
+			font-size: 14px
+			margin-bottom: 0
+			color: #a7a7a7
+			a
+				text-decoration: none
+				color: $accent
+				border-bottom: 1px solid $accent
+				transition: .3s ease
+				&:hover,&:focus
+					border-bottom: none
+			&:before
+				content: ''
+				position: absolute
+				top: 0px
+				left: 0
+				width: 19px
+				height: 19px
+				border-radius: 3px
+				background: #d7d7d7
+				transition: .2s
+			&:after
+				content: ""
+				font-family: FontAwesome 	
+				position: absolute
+				font-size: 14px
+				top: 0px
+				left: 3px
+				transition: .2s
+				color: #3f3f3f
+		&:checked
+			& + label
+				&:before
+					background: #d7d7d7
+				&:after
+					content: '\f00c' 
+button.mfp-close
+	background-color: #e8e8e8			
+	transition: $trans	
+	width: 30px
+	height: 30px
+	line-height: 30px
+
+.swal-modal
+	.swal-button
+		background-color: $accent
+		border-radius: 2px
+		border: 1px solid $accent	

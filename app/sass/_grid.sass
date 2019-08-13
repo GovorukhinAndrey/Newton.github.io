@@ -1,0 +1,511 @@
+//формат .col-12, .colg-12 - всегда столько колонок	
+.col-
+	&1
+		+col(1)
+	&2
+		+col(2)	
+	&3
+		+col(3)
+	&4
+		+col(4)					
+	&5
+		+col(5)
+	&6
+		+col(6)	
+	&7
+		+col(7)	
+	&8
+		+col(8)
+	&9
+		+col(9)
+	&10
+		+col(10)	
+	&11
+		+col(11)	
+	&12
+		+col(12)	
+.colg-
+	&1
+		+col(1,no)
+	&2
+		+col(2,no)	
+	&3
+		+col(3,no)
+	&4
+		+col(4,no)					
+	&5
+		+col(5,no)
+	&6
+		+col(6,no)	
+	&7
+		+col(7,no)	
+	&8
+		+col(8,no)
+	&9
+		+col(9,no)
+	&10
+		+col(10,no)	
+	&11
+		+col(11,no)	
+	&12
+		+col(12,no)
+
+// col,colg    - одинаковая ширина колонок по кол-ву блоков
+// col8, colg8 - объект занимает 8 колонок но на xs 12	 
+// col8-md-12, colg8-md-12 - объект занимает 8 колонок но с md 12 на xs 12
+// col8-md-6, colg8-md-6	 - объект занимает 8 колонок но с md 6	на xs 12
+// col-md-6, colg-md-6     - только c данного экрана(md) будет указанное кол-во колонок (6)	
+.col
+	+col()
+	&1
+		+col(1)
+		+col-xs(12)
+	&2
+		+col(2)
+		+col-xs(12)	
+	&3
+		+col(3)
+		+col-xs(12)	
+	&4
+		+col(4)
+		+col-xs(12)
+		&-md-6
+			+col-sm(6)
+			+col-md(6)
+			+col-lg(4)
+			+col-xs(12)		
+		&-sm-12
+			+col-sm(12)
+			+col-md(4)
+			+col-lg(4)
+			+col-xs(12)		
+	&5
+		+col(5)
+		+col-xs(12)
+	&6
+		+col(6)
+		+col-xs(12)
+		&-sm-12
+			+col-sm(12)
+			+col-md(6)
+			+col-lg(6)
+			+col-xs(12)			
+	&7
+		+col(7)
+		+col-xs(12)							
+	&8
+		+col(8)
+		+col-xs(12)		
+		&-sm-12		
+			+col-sm(12)
+			+col-md(8)
+			+col-lg(8)
+			+col-xs(12)
+		&-md-12		
+			+col-sm(12)
+			+col-md(12)
+			+col-lg(8)
+			+col-xs(12)				
+	&9
+		+col(9)
+		+col-xs(12)			
+		&-sm-12		
+			+col-sm(12)
+			+col-md(9)
+			+col-lg(9)
+			+col-xs(12)	
+		&-md-12		
+			+col-sm(12)
+			+col-md(12)
+			+col-lg(9)
+			+col-xs(12)	
+	&10
+		+col(10)
+		+col-xs(12)	
+	&11
+		+col(11)
+		+col-xs(12)
+	&12
+		+col(12)
+		+col-xs(12)	
+	&-xl
+		&-1
+			+col-xl(1)	
+		&-2
+			+col-xl(2)
+		&-3
+			+col-xl(3)
+		&-4
+			+col-xl(4)
+		&-5
+			+col-xl(5)
+		&-6
+			+col-xl(6)
+		&-7
+			+col-xl(7)
+		&-8
+			+col-xl(8)					
+		&-9
+			+col-xl(9)
+		&-10
+			+col-xl(10)
+		&-11
+			+col-xl(11)
+		&-12			
+			+col-xl(12)
+	&-md
+		&-1
+			+col-md(1)	
+		&-2
+			+col-md(2)
+		&-3
+			+col-md(3)
+		&-4
+			+col-md(4)
+		&-5
+			+col-md(5)
+		&-6
+			+col-md(6)
+		&-7
+			+col-md(7)
+		&-8
+			+col-md(8)					
+		&-9
+			+col-md(9)
+		&-10
+			+col-md(10)
+		&-11
+			+col-md(11)
+		&-12			
+			+col-md(12)													
+	&-sm
+		&-1
+			+col-sm(1)	
+		&-2
+			+col-sm(2)
+		&-3
+			+col-sm(3)
+		&-4
+			+col-sm(4)
+		&-5
+			+col-sm(5)
+		&-6
+			+col-sm(6)
+		&-7
+			+col-sm(7)
+		&-8
+			+col-sm(8)					
+		&-9
+			+col-sm(9)
+		&-10
+			+col-sm(10)
+		&-11
+			+col-sm(11)		
+		&-12
+			+col-sm(12)	
+	&-xs
+		&-1
+			+col-xs(1)	
+		&-2
+			+col-xs(2)
+		&-3
+			+col-xs(3)
+		&-4
+			+col-xs(4)
+		&-5
+			+col-xs(5)
+		&-6
+			+col-xs(6)
+		&-7
+			+col-xs(7)
+		&-8
+			+col-xs(8)					
+		&-9
+			+col-xs(9)
+		&-10
+			+col-xs(10)
+		&-11
+			+col-xs(11)		
+		&-12
+			+col-xs(12)	
+.colg
+	+col(0,no)
+	&1
+		+col(1,no)
+		+col-xs(12,no)
+	&2
+		+col(2,no)
+		+col-xs(12,no)		
+	&3
+		+col(3,no)
+		+col-xs(12,no)
+		&-sm-6
+			+col-sm(6,no)
+			+col-md(3,no)	
+			+col(3,no)
+			+col-xs(12,no)	
+	&4
+		+col(4,no)
+		+col-xs(12,no)
+	&5
+		+col(5,no)
+		+col-xs(12,no)
+		&-md-6
+			+col-sm(6,no)
+			+col-md(6,no)	
+			+col(5,no)
+			+col-xs(12,no)			
+	&6
+		+col(6,no)
+		+col-xs(12,no)
+	&7
+		+col(7,no)
+		+col-xs(12,no)
+		&-md-6
+			+col-sm(6,no)
+			+col-md(6,no)	
+			+col(7,no)
+			+col-xs(12,no)							
+	&8
+		+col(8,no)
+		+col-xs(12,no)
+	&9
+		+col(9,no)
+		+col-xs(12,no)
+		&-sm-12		
+			+col-sm(12,no)
+			+col-md(9,no)
+			+col-lg(9,no)
+			+col-xs(12,no)	
+		&-md-12		
+			+col-sm(12,no)
+			+col-md(12,no)
+			+col-lg(9,no)
+			+col-xs(12,no)			
+	&10
+		+col(10,no)
+		+col-xs(12,no)
+	&11
+		+col(11,no)
+		+col-xs(12,no)	
+	&12
+		+col(12,no)
+		+col-xs(12,no)															
+
+	&-md
+		&-1
+			+col-md(1,no)	
+		&-2
+			+col-md(2,no)
+		&-3
+			+col-md(3,no)
+		&-4
+			+col-md(4,no)
+		&-5
+			+col-md(5,no)
+		&-6
+			+col-md(6,no)
+		&-7
+			+col-md(7,no)
+		&-8
+			+col-md(8,no)					
+		&-9
+			+col-md(9,no)
+		&-10
+			+col-md(10,no)
+		&-11
+			+col-md(11,no)
+		&-12			
+			+col-md(12,no)													
+	&-sm
+		&-1
+			+col-sm(1,no)	
+		&-2
+			+col-sm(2,no)
+		&-3
+			+col-sm(3,no)
+		&-4
+			+col-sm(4,no)
+		&-5
+			+col-sm(5,no)
+		&-6
+			+col-sm(6,no)
+		&-7
+			+col-sm(7,no)
+		&-8
+			+col-sm(8,no)					
+		&-9
+			+col-sm(9,no)
+		&-10
+			+col-sm(10,no)
+		&-11
+			+col-sm(11,no)		
+		&-12
+			+col-sm(12,no)	
+	&-xs
+		&-1
+			+col-xs(1,no)	
+		&-2
+			+col-xs(2,no)
+		&-3
+			+col-xs(3,no)
+		&-4
+			+col-xs(4,no)
+		&-5
+			+col-xs(5,no)
+		&-6
+			+col-xs(6,no)
+		&-7
+			+col-xs(7,no)
+		&-8
+			+col-xs(8,no)					
+		&-9
+			+col-xs(9,no)
+		&-10
+			+col-xs(10,no)
+		&-11
+			+col-xs(11,no)		
+		&-12
+			+col-xs(12,no)	
+////////////			
+// flex без отступов
+.row_flex
+	display: flex
+	flex-wrap: wrap
+// flex c отсупами
+.row_flex_padding
+	display: flex
+	flex-wrap: wrap
+	padding:
+		left: $padding / 2
+		right: $padding / 2	
+
+.flex-fluid
+	+grid(fluid)
+			
+.flex-fluid-padding
+	+grid(fluid)
+	padding:
+		left: $padding / 2
+		right: $padding / 2				
+//flex без отступов, максимальная ширина по сетке
+
+.flex
+	+grid()
+	+media-md(down)
+		max-width: 100%	
+//flex контейнер с отступами, максимальная ширина по сетке	
+
+.flex_container 
+	+grid()
+	+media-md(down)
+		max-width: 100%		
+	padding:
+		left: $padding / 2
+		right: $padding / 2
+
+// блок с отсупами, максимальная ширина по сетке
+.container
+	+container()
+	+media-md(down)
+		max-width: 100%		
+	padding:
+		left: $padding / 2
+		right: $padding / 2		
+.container-fluid
+	+container(fluid)
+	+media-md(down)
+		max-width: 100%	
+//			
+.hidden
+	display: none
+	&-xs
+		+hidden-xs(down)
+	&-sm
+		+hidden-sm(down)			
+	&-md
+		+hidden-md(down)
+	&-lg
+		+hidden-lg(down)		
+.hidden-up
+	&-sm
+		+hidden-sm(up)			
+	&-md
+		+hidden-md(up)
+	&-lg
+		+hidden-lg(up)
+
+.hidden_block
+	&-sm
+		+media-xs(down)
+			display: none
+		+media-xs(up)
+			display: none
+		+media-sm(up)
+			display: block	
+	&-md
+		+media-xs(down)
+			display: none
+		+media-xs(up)
+			display: none
+		+media-md(up)
+			display: block
+	&-lg
+		+media-xs(down)
+			display: none
+		+media-xs(up)
+			display: none
+		+media-lg(up)
+			display: block
+.order
+	&-1
+		order: 1
+	&-2
+		order: 2
+	&-3
+		order: 3
+	&-4
+		order: 4	
+	&-5
+		order: 5
+	&-6
+		order: 6
+	&-7
+		order: 7
+	&-8
+		order: 8
+	&-9
+		order: 9
+	&-10
+		order: 10
+	&-11
+		order: 11	
+	&-12
+		order: 12												
+.offset
+	&-r	
+		&-1
+			+offset(right, 1)		
+		&-2
+			+offset(right, 2)			
+		&-3
+			+offset(right, 3)		
+		&-4
+			+offset(right, 4)	
+		&-5
+			+offset(right, 5)	
+		&-6
+			+offset(right, 6)			
+	&-l	
+		&-1
+			+offset(left, 1)
+		&-2
+			+offset(left, 2)			
+		&-3
+			+offset(left, 3)		
+		&-4
+			+offset(left, 4)	
+		&-5
+			+offset(left, 5)	
+		&-6
+			+offset(left, 6)															
